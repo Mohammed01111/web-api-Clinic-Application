@@ -23,6 +23,7 @@ namespace web_api_app.Repositories
         {
             return _context.Clinics
                 .FirstOrDefault(c => c.Specialization.Equals(specialization, StringComparison.OrdinalIgnoreCase));
+
         }
 
     }
