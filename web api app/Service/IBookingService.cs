@@ -7,5 +7,7 @@ namespace web_api_app.Service
         void BookAppointment(int patientId, int clinicId, DateTime date, int slotNumber);
         IEnumerable<Booking> GetAppointmentsByClinic(int clinicId);
         IEnumerable<Booking> GetAppointmentsByPatient(int patientId);
+
+        IEnumerable<Booking> GetAppointmentsByName(string name);
     }
 }

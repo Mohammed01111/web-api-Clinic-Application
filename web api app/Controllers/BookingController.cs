@@ -28,6 +28,12 @@ namespace web_api_app.Controllers
         [HttpGet("patient/{patientId}")]
         public IActionResult GetAppointmentsByPatient(int patientId) =>
             Ok(_bookingService.GetAppointmentsByPatient(patientId));
+
+        [HttpGet("name/{name}")]
+        public IActionResult GetAppointmentsByName(string name) =>
+        Ok(_bookingService.GetAppointmentsByName(name));
+
+
     }
 
 }

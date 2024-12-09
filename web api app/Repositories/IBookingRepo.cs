@@ -7,5 +7,7 @@ namespace web_api_app.Repositories
         void AddBooking(Booking booking);
         IEnumerable<Booking> GetBookingsByClinic(int clinicId);
         IEnumerable<Booking> GetBookingsByPatient(int patientId);
+
+        IEnumerable<Booking> GetAppointmentsByName(string name);
     }
 }

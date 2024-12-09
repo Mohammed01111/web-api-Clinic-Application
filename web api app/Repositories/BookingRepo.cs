@@ -29,5 +29,8 @@ namespace web_api_app.Repositories
                     .Where(b => b.PID == patientId)
                     .Include(b => b.Clinic)
                     .ToList();
+
+        public IEnumerable<Booking> GetAppointmentsByName(string name) =>
+        _context.Bookings.Where(a => a.Patient.Name.Contains(name));
     }
 }
