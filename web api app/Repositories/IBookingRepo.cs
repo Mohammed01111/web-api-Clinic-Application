@@ -8,6 +8,7 @@ namespace web_api_app.Repositories
         IEnumerable<Booking> GetBookingsByClinic(int clinicId);
         IEnumerable<Booking> GetBookingsByPatient(int patientId);
 
+       
         IEnumerable<Booking> GetAppointmentsByName(string name);
     }
 }
