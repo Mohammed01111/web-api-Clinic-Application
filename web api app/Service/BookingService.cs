@@ -36,6 +36,8 @@ namespace web_api_app.Service
 
         public IEnumerable<Booking> GetAppointmentsByName(string name) =>
         _bookingRepo.GetAppointmentsByName(name);
+
+
     }
 
 }
