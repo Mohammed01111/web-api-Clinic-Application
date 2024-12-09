@@ -34,6 +34,7 @@ namespace web_api_app.Controllers
         Ok(_bookingService.GetAppointmentsByName(name));
 
 
+
     }
 
 }
