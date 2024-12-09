@@ -24,6 +24,15 @@ namespace web_api_app.Service
         {
             return _clinicRepo.GetClinics();
         }
+
+        public Clinic GetClinicBySpecialization(string specialization)
+        {
+            var clinic = _clinicRepo.GetClinicBySpecialization(specialization);
+            if (clinic == null)
+                throw new Exception($"No clinic found with specialization: {specialization}");
+
+            return clinic;
+        }
     }
 }
 

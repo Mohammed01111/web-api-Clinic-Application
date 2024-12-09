@@ -18,5 +18,12 @@ namespace web_api_app.Repositories
         }
 
         public IEnumerable<Clinic> GetClinics() => _context.Clinics.ToList();
+
+        public Clinic GetClinicBySpecialization(string specialization)
+        {
+            return _context.Clinics
+                .FirstOrDefault(c => c.Specialization.Equals(specialization, StringComparison.OrdinalIgnoreCase));
+        }
+
     }
 }

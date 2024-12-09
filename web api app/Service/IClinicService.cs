@@ -6,5 +6,7 @@ namespace web_api_app.Service
     {
         void AddClinic(Clinic clinic);
         IEnumerable<Clinic> GetAllClinics();
+
+        Clinic GetClinicBySpecialization(string specialization);
     }
 }

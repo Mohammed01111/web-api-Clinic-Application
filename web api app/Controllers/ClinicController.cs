@@ -28,7 +28,21 @@ namespace web_api_app.Controllers
             return Ok("Clinic added successfully");
         }
 
+
+
+        [HttpGet("view/specialization")]
+        public IActionResult GetClinicBySpecialization(string specialization)
+        {
+            var clinic = _clinicRepo.GetClinics().FirstOrDefault(c => c.Specialization.Equals(specialization, StringComparison.OrdinalIgnoreCase));
+            if (clinic == null)
+            {
+                return NotFound($"No clinic found with specialization: {specialization}");
+            }
+            return Ok(clinic);
+        }
+
         [HttpGet("view")]
         public IActionResult GetClinics() => Ok(_clinicRepo.GetClinics());
+
     }
 }

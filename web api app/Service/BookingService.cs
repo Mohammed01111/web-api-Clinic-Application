@@ -38,6 +38,7 @@ namespace web_api_app.Service
         _bookingRepo.GetAppointmentsByName(name);
 
 
+
     }
 
 }

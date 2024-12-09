@@ -6,5 +6,7 @@ namespace web_api_app.Repositories
     {
         void AddClinic(Clinic clinic);
         IEnumerable<Clinic> GetClinics();
+
+        Clinic GetClinicBySpecialization(string specialization);
     }
 }
