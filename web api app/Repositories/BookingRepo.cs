@@ -32,5 +32,6 @@ namespace web_api_app.Repositories
 
         public IEnumerable<Booking> GetAppointmentsByName(string name) =>
         _context.Bookings.Where(a => a.Patient.Name.Contains(name));
+
     }
 }
