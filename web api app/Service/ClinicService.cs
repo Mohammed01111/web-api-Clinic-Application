@@ -32,6 +32,7 @@ namespace web_api_app.Service
                 throw new Exception($"No clinic found with specialization: {specialization}");
 
             return clinic;
+
         }
     }
 }
