@@ -8,5 +8,6 @@ namespace web_api_app.Repositories
         IEnumerable<Clinic> GetClinics();
 
         Clinic GetClinicBySpecialization(string specialization);
+
     }
 }
